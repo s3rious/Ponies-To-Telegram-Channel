@@ -16,7 +16,7 @@ docker-compose exec mongo mongo admin
 db.createUser({ user: 'your_mongo_admin_name', pwd: 'your_mongo_admin_password', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
 ```
 
-And most importantly you should crate your mongo database and user with read'n'write permissions
+And most importantly you should create your mongo database and user with read'n'write permissions
 ```
 docker-compose exec mongo mongo admin -u your_mongo_admin_name -p your_mongo_admin_password
 use your_mongo_database_name;
