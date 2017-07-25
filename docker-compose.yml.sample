@@ -1,0 +1,37 @@
+app:
+  build: .
+  volumes:
+    - ./app/:/app/
+  working_dir: /app/
+  environment:
+    # Grabbing
+    - GRABBING_CRON_INTERVAL=0 */30 * * * * # each 30 minutes https://github.com/ncb000gt/node-cron
+    - GRABBING_URLS= # derpibooru api endpoint, https://derpibooru.org/pages/api
+    - GRABBING_PAGES=10 # grab 10 pages
+
+    # Mongo
+    - MONGO_DATABASE=database # Your mongo database name
+    - MONGO_USER=user # Your mongo username
+    - MONGO_PASSWORD=password # Your mongo database password
+
+    # Posting
+    - POSTING_CRON_INTERVAL=0 0 */1 * * * # each 1 hour https://github.com/ncb000gt/node-cron
+    - TELEGRAM_BOT_TOKEN=XXX:YYYYYYYYYYY # telegram bot token
+    - TELEGRAM_CHANNEL_NAME=@cloudsdale # your telegram channel nakme
+
+  command: npm start
+  links:
+    - mongo
+
+mongodata:
+  image: mongo:3.2.8
+  volumes:
+    - /data/db
+  command: --break-mongo
+mongo:
+  image: mongo:3.2.8
+  volumes_from:
+    - mongodata
+  ports:
+    - "27017:27017"
+  command: --smallfiles --rest --auth

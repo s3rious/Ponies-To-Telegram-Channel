@@ -1,0 +1,43 @@
+{
+  "name": "hoofington-poster",
+  "version": "0.34.0",
+  "private": true,
+  "description": "Automated derpibooru to telegram channel poster",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/.bin/forever forever.json"
+  },
+  "author": "s3rious a.k.a Leonid Semenov <canismajor@kaschenka.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "cheerio": "^0.20.0",
+    "cron": "^1.1.0",
+    "forever": "^0.15.2",
+    "fs-promise": "^0.5.0",
+    "intel": "^1.1.1",
+    "lodash": "^4.13.1",
+    "mongoose": "^4.5.5",
+    "request-promise": "^1.0.2",
+    "telegram-bot-api": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.9.2",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^5.2.2"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}

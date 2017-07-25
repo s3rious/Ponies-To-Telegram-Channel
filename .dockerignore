@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Git
+.git
+.gitignore
+
+# Logs
+logs
+log
+*.log
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Docker
+docker-compose.yml
+
+# Info
+README.md
