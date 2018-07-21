@@ -15,14 +15,19 @@ mongoose.connect(
   }
 );
 
-const imageSchema = new Schema({
-  id: { type: Number, index: true },
-  src: String,
-  original_source: String,
-  format: String,
-  mime_type: String,
-  status: { type: String, index: true }
-});
+const imageSchema = new Schema(
+  {
+    id: { type: Number, index: true },
+    src: String,
+    original_source: String,
+    format: String,
+    mime_type: String,
+    status: { type: String, index: true },
+  },
+  {
+    timestamps: true
+  }
+);
 
 const Image = mongoose.model('Image', imageSchema);
 

@@ -12,6 +12,7 @@ node_modules
 
 # Temporary folder
 .tmp
+.cache
 
 # Ignore ignore
 !.gitkeep
