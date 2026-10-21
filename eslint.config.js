@@ -3,7 +3,7 @@ import tseslint from 'typescript-eslint';
 import importX from 'eslint-plugin-import-x';
 
 export default tseslint.config(
-  { ignores: ['node_modules/**', 'logs/**', 'tmp/**', 'legacy/**'] },
+  { ignores: ['node_modules/**', 'logs/**', 'tmp/**'] },
   {
     files: ['**/*.js'],
     ...js.configs.recommended,

@@ -2,8 +2,6 @@
 
 The digital-ocean repo includes this repo as the git submodule `derpibooru-poster/`. The Hoofbeat and Hoofington wrappers there build from `../derpibooru-poster` in their compose files.
 
-`legacy/` holds the original JavaScript app and is not linted, type-checked or tested.
-
 ## Stack
 
 - Node 22, TypeScript via `--experimental-strip-types` (no build step)

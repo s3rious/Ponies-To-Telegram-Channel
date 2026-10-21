@@ -1,5 +1,0 @@
-{
-  "watch": true,
-  "script": "dist/app.js",
-  "sourceDir": "./"
-}
