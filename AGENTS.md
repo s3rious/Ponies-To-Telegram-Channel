@@ -1,6 +1,6 @@
 # derpibooru-poster — Shared poster code
 
-Copy of `derpibooru-poster/` from the digital-ocean repo, which also keeps its own copy. The Hoofbeat and Hoofington wrappers there build from `../derpibooru-poster` in their compose files.
+The digital-ocean repo includes this repo as the git submodule `derpibooru-poster/`. The Hoofbeat and Hoofington wrappers there build from `../derpibooru-poster` in their compose files.
 
 `legacy/` holds the original JavaScript app and is not linted, type-checked or tested.
 
