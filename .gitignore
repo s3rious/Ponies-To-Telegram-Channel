@@ -1,0 +1,8 @@
+node_modules/
+logs/
+tmp/
+.DS_Store
+*.env
+.prototools
+.cursor/
+.vscode/

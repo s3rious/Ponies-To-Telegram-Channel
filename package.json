@@ -1,0 +1,32 @@
+{
+  "name": "derpibooru-poster",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared Derpibooru -> Telegram poster for Hoofbeat and Hoofington",
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types --no-warnings=ExperimentalWarning src/app.ts",
+    "dev": "node --experimental-strip-types --no-warnings=ExperimentalWarning --watch src/app.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "node --experimental-strip-types --no-warnings=ExperimentalWarning --experimental-test-coverage --test-coverage-exclude='test/**' --test-coverage-exclude='node_modules/**' --test 'test/*.test.ts'",
+    "test:integration": "bash test/integration/run.sh"
+  },
+  "dependencies": {
+    "cron": "^3.5.0",
+    "grammy": "^1.30.0",
+    "mongoose": "^8.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.10.0",
+    "eslint": "^10.4.0",
+    "eslint-plugin-import-x": "^4.16.2",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.60.0"
+  }
+}

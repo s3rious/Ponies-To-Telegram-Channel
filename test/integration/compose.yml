@@ -1,0 +1,10 @@
+services:
+  mongo:
+    image: mongo:4.4
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: testuser
+      MONGO_INITDB_ROOT_PASSWORD: testpass
+    ports:
+      - "27019:27017"
+    tmpfs:
+      - /data/db
